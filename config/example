@@ -1,0 +1,3 @@
+CONFLUENCE_URL=https://example.atlassian.net/wiki
+CONFLUENCE_USERNAME=example@example.com
+CONFLUENCE_APIKEY=xx

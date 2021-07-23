@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+    confluencesearch:
+        build: 
+            context: "."
+        image: local/confluencesearch
+    search-python:
+        image: local/confluencesearch
+        env_file:
+            - config/confluence
+    save-python-pdf:
+        image: local/confluencesearch
+        env_file:
+            - config/confluence
+        volumes:
+            - ./:/app
+        command: ["/search.py", "--tags", "python", "--verbose", "--exportpdf" ]
+        #            --tags azuread --verbose --exportpdf
